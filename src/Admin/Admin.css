@@ -1,0 +1,33 @@
+
+
+.DexSideNacBar{
+    position:fixed;
+    top: 65px;
+    left: 0;
+    width: 300px;
+    height:100%;
+    padding-top: 100px;
+    background-color:rgba(15, 8, 8, 0.74);
+}
+.DexSideNacBar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+}
+.DexSideNacBar ul li{
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.267);
+    margin-bottom:20px;
+    padding-left:20px;
+    font-size: 20px;
+    transition:0.8s;
+}
+.DexSideNacBar ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.DexSideNacBar ul li:hover{
+    padding-left:30px;
+    background-color: rgba(0, 0, 0, 0.74);
+}

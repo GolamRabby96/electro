@@ -1,0 +1,58 @@
+/* .sticky-top{
+    transition:1s;
+} */
+.navHeader{
+    transition:10s ;
+    position:relative;
+    margin-bottom: 65px;
+}
+.true1{
+    position:fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition:all 0.6s ease;
+    z-index: 1030;
+    background-color: #000000ce!important;
+    margin-top:-10px;
+    border-bottom: 1px solid rgba(8, 245, 8, 0.74);
+}
+.true1:hover{
+    border-bottom: 2px solid rgba(21, 255, 0, 0.829);
+    margin-top:0px;
+}
+
+.ShoppingCart{
+    display: block;
+    padding-right: 20px;
+    padding-top: 13px;
+    color: white;
+    cursor:pointer;
+}
+.ShoppingCart a{
+    text-decoration: none;
+    color: #00dc3e;
+}
+.UserNameNav{
+    color:rgba(0, 255, 255, 0.918);
+}
+.ShoppingCart span{
+    font-size: 16px;
+    background: rgb(0 0 0 / 71%);
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 215;
+    margin-left: 4px;
+    font-weight: 500;
+    border-radius: 20px;
+}
+.ShoppingCart a:hover{
+    color:aqua;
+    transition: 1s;
+}
+.ShoppingCart p{
+    padding-top: 5px;
+}
+.navbar-dark .navbar-brand {
+    color: #00dc3e;
+}

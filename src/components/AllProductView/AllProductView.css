@@ -1,0 +1,29 @@
+.fixed-top {
+    position: fixed;
+    top: 75px;
+    left: 94%;
+    z-index: 1030;
+}
+.offcanvasedit {
+    background-color: rgba(5, 1, 1, 0.219);
+}
+.navbar-nav {
+    padding-left: 10px;
+}
+.navbar-nav .nav-link {
+    font-size: 22px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    
+    text-shadow: 0px 10px 8px #000000
+}
+.customNavLInk{
+    color: rgb(2 251 152 / 90%) !important;
+}
+.navbar-dark .navbar-toggler {
+    color: rgb(0 0 0);
+    border-color: rgb(8 1 1 / 95%);
+}
+.navbar-dark .navbar-toggler-icon-custom {
+    background-image: url('../../image//navImg/nav2.png');
+}

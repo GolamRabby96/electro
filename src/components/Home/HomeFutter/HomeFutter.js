@@ -13,7 +13,7 @@ const HomeFutter = () => {
 		<div className=" homeFuter">
 			<div className="container">
 				<div className="row">
-					<div className="col-md-4">
+					<div className=" col-6 col-sm-6 col-md-3">
 						<div className="futterElement">
 							<ul>
 								<a href=""><li><span>{arrow}</span>Prices Drop</li></a>
@@ -24,7 +24,7 @@ const HomeFutter = () => {
 							</ul>
 						</div>
 					</div>
-					<div className="col-md-4">
+					<div className=" col-6 col-sm-6 col-md-3">
                     <div className="futterElement">
 							<ul>
 								<a href=""><li><span>{arrow}</span>Prices Drop</li></a>
@@ -35,8 +35,19 @@ const HomeFutter = () => {
 							</ul>
 						</div>
 					</div>
-					<div className="col-md-4">
-                    <div className="futterElement">
+					<div className=" col-6 col-sm-6 col-md-3">
+                   		 <div className="futterElement">
+							<ul>
+								<a href=""><li><span>{arrow}</span>Prices Drop</li></a>
+								<a href=""><li><span>{arrow}</span>New Products</li></a>
+								<a href=""><li><span>{arrow}</span>Best Sales</li></a>
+								<a href=""><li><span>{arrow}</span>Contact Us</li></a>
+								<a href=""><li><span>{arrow}</span>Stores</li></a>			
+							</ul>
+						</div>
+					</div>
+					<div className=" col-6 col-sm-6 col-md-3">
+                   		 <div className="futterElement">
 							<ul>
 								<a href=""><li><span>{arrow}</span>Prices Drop</li></a>
 								<a href=""><li><span>{arrow}</span>New Products</li></a>

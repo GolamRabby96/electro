@@ -1,0 +1,16 @@
+.containerPaymentTop{
+    height:100vh;
+    background: rgb(224, 224, 224);
+}
+.paymentContainer{
+    margin-top: 80px;
+    padding: 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    background: rgb(224, 223, 223);
+}
+.productCountPayment{
+    text-align: center;
+    /* border-bottom: 1px solid gray; */
+    box-shadow: 0px 8px 6px #b8a3a3;
+    padding: 20px;
+}

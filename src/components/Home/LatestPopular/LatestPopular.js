@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './LatestPopular.css'
 
 const LatestPopular = () => {
@@ -8,7 +9,7 @@ const LatestPopular = () => {
                 <div className="col-md-12">
                     <div className="latestPopularZDiv">
                         <h4>Latest and Popular Brand</h4>
-                        <a href="" className="latestPopularBtn">View More</a>
+                        <Link to="/product" className="latestPopularBtn">View More</Link>
                     </div>
                 </div>
             </div>

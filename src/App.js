@@ -13,6 +13,7 @@ import SignIn from "./components/SignIn/SignIn";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import ProcessPayment from "./components/ProcessPayment/ProcessPayment";
 import jwt from "jwt-decode";
+import ProductDisplay from "./components/ProductDisplay/ProductDisplay";
 
 export const UserContext = createContext();
 
@@ -24,7 +25,7 @@ function App() {
 		email: "",
 	});
 
-	// console.log(loggedInUser);
+	console.log(loggedInUser);
 
 	useEffect(() => {
 		const initialCart = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -63,6 +64,9 @@ function App() {
 						</Route>
 						<Route exact path="/category/:name">
 							<AllProductView />
+						</Route>
+						<Route exact path="/product">
+							<ProductDisplay />
 						</Route>
 						<PrivateRoute exact path="/Admin">
 							<Admin />

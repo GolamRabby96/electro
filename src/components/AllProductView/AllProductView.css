@@ -4,21 +4,37 @@
     left: 94%;
     z-index: 1030;
 }
+.offcanvas-end {
+    transition: all 0.6s ease;
+    top: 63px !important;
+    right: 0;
+    width: 400px;
+    border-left: 1px solid rgba(0,0,0,.2);
+    transform: translateX(100%);
+    box-shadow: 0px 29px 20px #3c3a3a;
+}
 .offcanvasedit {
-    background-color: rgba(5, 1, 1, 0.219);
+    background-color: rgba(252, 252, 252, 0.959);
 }
 .navbar-nav {
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 .navbar-nav .nav-link {
     font-size: 22px;
 }
 .navbar-dark .navbar-nav .nav-link {
     
-    text-shadow: 0px 10px 8px #000000
+    /* text-shadow: 0px 10px 8px #000000 */
 }
 .customNavLInk{
-    color: rgb(2 251 152 / 90%) !important;
+    color: rgba(53, 53, 53, 0.75) !important;
+    font-weight: 600;
+    border-bottom: 1px solid rgb(199, 196, 196);
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    transition: all 0.6s ease;
+    color: rgba(3, 3, 3, 0.75) !important;
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 .navbar-dark .navbar-toggler {
     color: rgb(0 0 0);

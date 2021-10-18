@@ -20,10 +20,13 @@ const SignIn = () => {
 	const [newUser, setNewUser] = useState(false);
 	const [user, setUser] = useState({
 		ifUser:true,
+		name:'',
 		email:'',
-		password:''
+		password:'',
+		home:''
 	});
-
+	const [userDB, setUserDb] = useState({})
+	 console.log('..........',userDB);
 	const [cartApp, setCartApp] = value1;
 	const [loggedInUser, setLoggedInUser] = value2;
 	const provider = new GoogleAuthProvider();
@@ -88,7 +91,10 @@ const SignIn = () => {
 			const newUserInfo = {...user};
 			newUserInfo[e.target.name] = e.target.value;
 			setUser(newUserInfo);
-
+			
+			const DbuserInfo = {...userDB};
+			DbuserInfo[e.target.name] = e.target.value;
+			setUserDb(DbuserInfo);
 		}
 	}
 	const handleSubmit=(e)=>{
@@ -97,6 +103,7 @@ const SignIn = () => {
 			firebase
 			.auth().createUserWithEmailAndPassword(user.email, user.password)
 			.then( res => {
+				insertUserData();
 				setNewUser(false);
 				setInfoMessage('Registration successful ');
 			})
@@ -115,16 +122,44 @@ const SignIn = () => {
 
 	}
 
+	const insertUserData =()=>{
+		fetch('http://localhost:5000/addUser',{
+					method: 'POST',
+					headers: { 'Content-Type':'application/json'},
+					body: JSON.stringify(userDB)
+				})
+				.then( res=> res.json())
+				.then( data => {
+					window.alert("user Added")
+				})
+	}
+
 	return (
 		<div className="loginMain">
 			<div className="container">
 				<div className="row">
-					<div className="col-md-">
+					<div className="col-md-12">
 						<p className="text-center bg-info">{infoMessege}</p>
 					</div>
-					<div className="col-md-4 offset-md-4 pt-5">
-						<div className="formSection mt-5 ">
+					<div className="col-md-6 offset-md-3 pt-5">
+						<div className="formSection ">
 							<form onSubmit={handleSubmit}>
+
+							{newUser &&
+								<div class="mb-3">
+									<label for="yourName" class="form-label">
+										Your Name
+									</label>
+									<input
+										type="text"
+										name="name"
+										onBlur={handleBlur}
+										class="form-controlEdit"
+										id="yourName"
+										placeholder="Your Name"
+									/>
+								</div>
+							}
 								<div class="mb-3">
 									<label for="exampleInputEmail1" class="form-label">
 										Email address
@@ -136,6 +171,7 @@ const SignIn = () => {
 										class="form-controlEdit"
 										id="exampleInputEmail1"
 										aria-describedby="emailHelp"
+										placeholder="You email"
 									/>
 								</div>
 								<div class="mb-3">
@@ -148,6 +184,7 @@ const SignIn = () => {
 										onBlur={handleBlur}
 										class="form-controlEdit"
 										id="exampleInputPassword1"
+										placeholder="Enter password"
 									/>
 								</div>
                                 {newUser &&<div class="mb-3">
@@ -160,8 +197,24 @@ const SignIn = () => {
 										onBlur={handleBlur}
 										class="form-controlEdit"
 										id="exampleInputPassword1"
+										placeholder="Confirm password"
 									/>
-								</div>}
+								</div>
+								}
+                                {newUser &&<div class="mb-3">
+									<label for="exampleInputPassword1" class="form-label">
+										You Home Address
+									</label>
+									<textarea
+										type="text"
+										name="home"
+										onBlur={handleBlur}
+										class="form-controlEdit"
+										id="exampleInputPassword1"
+										placeholder="Make sure we can find you easily"
+									/>
+								</div>
+								}
                                 {!newUser&&<p>Register?<span onClick={()=>setNewUser(!newUser)}>Click Here</span></p>}
                                 {newUser&&<p>Already User?<span onClick={()=>setNewUser(!newUser)}>Click Here</span></p>}
 

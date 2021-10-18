@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './BuyBestYourChoice.css'
 
 
@@ -9,7 +10,7 @@ const BuyBestYourChoice = () => {
                 <div className="col-md-12">
                     <div className="BuyBestYour">
                         <h4>Buy Best Your Choice</h4>
-                        <a href="" className="BuyBestYourBtn">View More</a>
+                        <Link to="/product" className="BuyBestYourBtn">View More</Link>
                     </div>
                 </div>
             </div>

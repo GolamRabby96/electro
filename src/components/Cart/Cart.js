@@ -90,7 +90,7 @@ const Cart = () => {
     }
 
 	return (
-		<div className="container mt-5">
+		<div className="container pt-5">
 			<div className="row">
 				<div className="col-md-12">
 					{cartItem.length>-1 &&<table class="table table-striped">
